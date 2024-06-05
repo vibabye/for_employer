@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div th:fragment="header">
+  <header class="site-header sticky-top py-1 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <nav class="navbar fixed-top navbar-expand-xl bg-body-tertiary ">
+      <div class="container-fluid">
+        <a class="navbar-brand">ЭКО-МАРКЕТ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Главная страница</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/goods" role="button" data-bs-toggle="dropdown" aria-expanded="false">Товары</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/goods">Посмотреть все товары</a></li>
+                <li><a class="dropdown-item" href="/goods/doily">Салфетки</a></li>
+                <li><a class="dropdown-item" href="/goods/fiber">Файберы</a></li>
+                <li><a class="dropdown-item" href="/goods/soap">Мыло</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">Об авторе</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cart">Корзина</a>
+            </li>
+          </ul>
+          <div class="col-md-3 text-end">
+            <a th:if="${authorized && isAdmin}">Админㅤ</a>
+            <a th:if="${authorized && !isAdmin}">Пользовательㅤ</a>
+            <a type="button" class="btn btn-outline-success me-2" th:href="@{/login}" th:if="${!authorized}">
+              Войти
+            </a>
+            <a type="button" class="btn btn-outline-success me-2" th:href="@{/registration}" th:if="${!authorized}">
+              Зарегистрироваться
+            </a>
+
+            <a type="button" class="btn btn-outline-success me-2" th:href="@{/logout}" th:if="${authorized}">Выйти</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+</body>
+</html>
+
+
+
+
+

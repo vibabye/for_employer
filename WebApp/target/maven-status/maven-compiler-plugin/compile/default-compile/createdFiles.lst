@@ -1,0 +1,13 @@
+com\ecomarket\WebApp\Service\GoodsService.class
+com\ecomarket\WebApp\models\basket.class
+com\ecomarket\WebApp\Controllers\UserController.class
+com\ecomarket\WebApp\Configuration\SecurityConfig.class
+com\ecomarket\WebApp\repository\GoodsRepository.class
+com\ecomarket\WebApp\WebAppApplication.class
+com\ecomarket\WebApp\Controllers\GoodsController.class
+com\ecomarket\WebApp\models\user.class
+com\ecomarket\WebApp\Service\UserService.class
+com\ecomarket\WebApp\models\goods.class
+com\ecomarket\WebApp\repository\UserRepository.class
+com\ecomarket\WebApp\Controllers\MainController.class
+com\ecomarket\WebApp\repository\BasketRepository.class
